@@ -106,6 +106,7 @@ body {
   color: #ffffff;
 }
 
+
 [data-theme="night"] .card {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
@@ -122,7 +123,7 @@ body {
 }
 
 [data-theme="night"] .text-white-50 {
-  color: #e0e0e0 !important;
+  color: #f1ebeb !important;
 }
 
 [data-theme="night"] .progress {
@@ -247,4 +248,60 @@ body {
   .card {
     margin-bottom: 20px;
   }
+}
+/* Ensure buttons take full width on very small screens */
+@media (max-width: 576px) {
+  .resume-btn,
+  .resume-btn-secondary {
+    width: 90%;  /* fills most of the screen */
+    margin: 5px auto;
+  }
+}
+.resume-btn,
+.resume-btn-secondary {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+[data-theme="day"] .resume-btn {
+  background-color: #5aa4d2;
+  color: #fff;
+  border: none;
+}
+[data-theme="day"] .resume-btn:hover {
+  background-color: #2176bd;
+}
+
+[data-theme="night"] .resume-btn {
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+}
+[data-theme="night"] .resume-btn:hover {
+  background-color: #16a085;
+}
+
+/* Secondary Resume Button */
+[data-theme="day"] .resume-btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+[data-theme="day"] .resume-btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+[data-theme="night"] .resume-btn-secondary {
+  background-color: #afb6b6;
+  color: #fff;
+  border: none;
+}
+[data-theme="night"] .resume-btn-secondary:hover {
+  background-color: #c8d3d4;
 }

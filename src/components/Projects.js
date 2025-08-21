@@ -25,8 +25,8 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-5 container">
-      <h2 className="fw-bold mb-4 text-center">Projects</h2>
+    <section id="projects" className="py-5 container text-white-50">
+      <h2 className="fw-bold mb-4 text-center text-white-50">Projects</h2>
       <div className="row">
         {projects.map((project, idx) => (
           <div key={idx} className="col-12 col-md-6 col-lg-4 mb-4">

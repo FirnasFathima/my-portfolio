@@ -13,7 +13,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-5 container">
+    <section id="skills" className="py-5 container text-white-50">
       <h2 className="fw-bold mb-4 text-center">Skills</h2>
       <div className="row g-4">
         {skills.map((skill, idx) => (

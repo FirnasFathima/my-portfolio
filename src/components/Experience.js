@@ -36,7 +36,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-5 container">
-      <h2 className="fw-bold mb-4 text-center">Experience</h2>
+      <h2 className="fw-bold mb-4 text-center text-white-50">Experience</h2>
       <div className="row g-4">
         {experience.map((exp, idx) => (
           <div key={idx} className="col-12 col-md-6 col-lg-4">
