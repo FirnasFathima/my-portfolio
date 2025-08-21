@@ -41,6 +41,12 @@
   animation: twinkle 5s ease-in-out infinite;
 }
 
+/* Global */
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 /* Day Theme Colors */
 [data-theme="day"] {
   color: #333333;
@@ -54,8 +60,9 @@
 [data-theme="day"] h1, h2, h3, h4, h5, h6 {
   color: #333333;
 }
-[data-theme="day"]p{
-  color:grey;
+
+[data-theme="day"] p {
+  color: grey;
 }
 
 [data-theme="day"] .card {
@@ -125,8 +132,8 @@
 [data-theme="night"] .progress-bar {
   background: #ffffff;
 }
-/* Styling for Resume buttons in both themes */
-/* Day Theme Button Colors */
+
+/* Resume Buttons */
 [data-theme="day"] .btn-primary {
   background-color: #d3d5d7;
   border-color: #ebeef1;
@@ -148,6 +155,7 @@
   background-color: #343a40;
   border-color: #343a40;
 }
+
 [data-theme="night"] .btn-primary {
   background-color: #3498db;
   border-color: #3498db;
@@ -163,6 +171,12 @@
 /* Hero Section */
 .hero {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
 }
 
 /* Theme toggle button */
@@ -172,6 +186,34 @@
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
+}
+
+/* Card Hover Effects */
+.card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Progress Bar Glow */
+.progress-bar {
+  transition: width 1s ease;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Contact Section */
+#contact p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#contact i {
+  font-size: 1.2rem;
 }
 
 /* Animations */
@@ -184,6 +226,7 @@
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
 }
+
 /* Navbar scroll effect */
 .navbar {
   transition: transform 0.3s ease-in-out;
@@ -191,4 +234,17 @@
 
 .navbar-hidden {
   transform: translateY(-100%);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 2rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
 }
